@@ -1,0 +1,23 @@
+{
+  "name": "automation-qa",
+  "version": "1.0.0",
+  "description": "This is test project for learning",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node nodeBasics/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helga-vm/automation-qa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Helga-vm/automation-qa/issues"
+  },
+  "homepage": "https://github.com/Helga-vm/automation-qa#readme",
+  "dependencies": {
+    "chalk": "^5.6.0"
+  }
+}
