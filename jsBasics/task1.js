@@ -1,8 +1,8 @@
-let strVar = 'Some string';
-let numVar = 5;
-let isBool = true;
-let nullVar = null;
-let undefVar;
+const strVar = 'Some string';
+const numVar = 5;
+const isBool = true;
+const nullVar = null;
+const undefVar = undefined;
 
 console.log(strVar);
 console.log(numVar);
