@@ -1,5 +1,5 @@
 function isUserAdult (age){
-    return age >= 18? true : false;
+    return age >= 18;
 }
 
 console.log("Is this user adult? ", isUserAdult(15));

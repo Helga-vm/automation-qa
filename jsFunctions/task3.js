@@ -1,23 +1,19 @@
 function checkOrder(available,ordered){
     if (typeof available !== "number" || typeof ordered !== "number"){
-        console.log("Entered value is not a number");
-        return;
+        return "Entered value is not a number";
     }
     if (ordered === 0){
-        console.log("Your order is empty");
-        return;
+        return "Your order is empty";
     }
     if (ordered > available){
-        console.log("Your order is too large, we don’t have enough goods");
-        return;
+        return "Your order is too large, we don’t have enough goods";
     }
-    console.log("Your order is accepted");
-    return;
+    return "Your order is accepted";
 }
 
-checkOrder(1,0);
-checkOrder(3,3);
-checkOrder(18,"1");
-checkOrder("70",0);
-checkOrder(90.9,91);
-checkOrder(9);
+console.log(checkOrder(1,0));
+console.log(checkOrder(3,3));
+console.log(checkOrder(18,"1"));
+console.log(checkOrder("70",0));
+console.log(checkOrder(90.9,91));
+console.log(checkOrder(9));
