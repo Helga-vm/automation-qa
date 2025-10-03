@@ -40,7 +40,7 @@ export class Book {
     }
 
     set setYear(year){
-        if (typeof year !== 'number' || year.length>2025){
+        if (typeof year !== 'number' || year>2025){
             return;
         }
         this.year = year;        
