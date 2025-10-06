@@ -1,26 +1,26 @@
 import { Book } from "./Book.js";
 
 export class EBook extends Book {
-    fileFormat;
+    _fileFormat;
 
     constructor(title,author,year,fileFormat){
         super(title,author,year);
-        this.fileFormat = fileFormat;
+        this._fileFormat = fileFormat;
     }
 
     printInfo(){
-        console.log(`This is "${this.title}" by ${this.author}, published in ${this.year} in ${this.fileFormat} format`);
+        console.log(`"${this.title}" by ${this.author}, published in ${this.year} in ${this.fileFormat} format`);
     }
 
-    get getFileFormat(){
-        return this.fileFormat;
+    get fileFormat(){
+        return this._fileFormat;
     }
 
-    set setFileFormat(fileFormat){
-        if (typeof fileFormat !== 'string' || fileFormat.length<2){
+    set fileFormat(newFileFormat){
+        if (typeof newFileFormat !== 'string' || newFileFormat.length<2){
             return;
         }
-        this.fileFormat = fileFormat;
+        this._fileFormat = newFileFormat;
     }
 
     static convertToEBook({title,author,year},fileFormat){

@@ -1,56 +1,56 @@
 export class Book {
-    title;
-    author;
-    year;
+    _title;
+    _author;
+    _year;
 
     constructor(title,author,year){
-        this.author = author;
-        this.title = title;
-        this.year = year;
+        this._author = author;
+        this._title = title;
+        this._year = year;
     }
 
     printInfo(){
-        console.log(`This is "${this.title}" by ${this.author}, published in ${this.year}`);
+        console.log(`"${this._title}" by ${this._author}, published in ${this._year}`);
     }
 
-    get getTitle(){
-        return this.title;
+    get title(){
+        return this._title;
     }
 
-    get getAuthor(){
-        return this.author;
+    get author(){
+        return this._author;
     }
 
-    get getYear(){
-        return this.year;
+    get year(){
+        return this._year;
     }
 
-    set setTitle(title){
+    set title(title){
         if (typeof title !== 'string' || title.length<1){
             return;
         }
-        this.title = title;
+        this._title = title;
     }
 
-    set setAuthor(author){
+    set author(author){
         if (typeof author !== 'string' || author.length<1){
             return;
         }
-        this.author = author;
+        this._author = author;
     }
 
-    set setYear(year){
+    set year(year){
         if (typeof year !== 'number' || year>2025){
             return;
         }
-        this.year = year;        
+        this._year = year;        
     }
 
     static getOldestBook(...books){
         if (books.length===1){
             return books[0];
         }
-        books.sort((book1,book2)=>book1.getYear - book2.getYear);
+        books.sort((book1,book2)=>book1.year - book2.year);
         return books[0];
     }
 
